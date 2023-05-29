@@ -1,57 +1,39 @@
-.calculator {
-margin: 0 auto;
-width: 300px;
-background-color: #f2f2f2;
-border: 1px solid #ccc;
-border-radius: 5px;
-padding: 10px;
-}
+<!DOCTYPE html>
+<html>
 
-.display {
-background-color: #fff;
-border: 1px solid #ccc;
-border-radius: 5px;
-padding: 5px;
-margin-bottom: 10px;
-}
+<head>
+  <title>Calculator</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
 
-.buttons {
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-grid-gap: 5px;
-}
+<body>
+  <h1>Online Calculator</h1>
+  <div class="calculator">
+    <div class="display">
+      <input type="text" id="result" disabled>
+    </div>
+    <div class="buttons">
+      <button class="operator" onclick="clearResult()">C</button>
+      <button class="operator" onclick="backspace()">CE</button>
+      <button class="operator" onclick="insert('+')">+</button>
+      <button class="operator" onclick="insert('-')">-</button>
+      <button onclick="insert('7')">7</button>
+      <button onclick="insert('8')">8</button>
+      <button onclick="insert('9')">9</button>
+      <button class="operator" onclick="insert('*')">*</button>
+      <button onclick="insert('4')">4</button>
+      <button onclick="insert('5')">5</button>
+      <button onclick="insert('6')">6</button>
+      <button class="operator" onclick="insert('/')">/</button>
+      <button onclick="insert('1')">1</button>
+      <button onclick="insert('2')">2</button>
+      <button onclick="insert('3')">3</button>
+      <button onclick="insert('.')">.</button>
+      <button onclick="insert('0')">0</button>
+      <button id="big" class="operator big" onclick="calculate()">=</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
 
-button {
-background-color: #4CAF50;
-color: #fff;
-border: none;
-border-radius: 5px;
-padding: 10px;
-cursor: pointer;
-font-size: 20px;
-}
-#big{
-  margin-right: -153px;
-}
-
-button:hover {
-background-color: #3e8e41;
-}
-
-.operator {
-background-color: #f44336;
-}
-
-.operator:hover {
-background-color: #d32f2f;
-}
-
-#result {
-font-size: 30px;
-text-align: right;
-padding: 5px;
-width: 100%;
-box-sizing: border-box;
-border: none;
-outline: none;
-}
+</html>
